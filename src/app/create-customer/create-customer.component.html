@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="customerForm" (ngSubmit)="showCustomer()">
+    <div class="row">
+      <label>Cliente</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="row">
+      <label>CIF</label>
+      <input type="text" formControlName="cif">
+    </div>
+    <div class="row">
+      <label>City</label>
+      <input type="text" formControlName="city">
+    </div>
+    <div class="row-button">
+      <button type="submit">Añadir</button>
+    </div>
+    <div *ngIf="customerInfo" class="info">
+      <h2>Información del Cliente:</h2>
+      <p>Nombre: {{ customerInfo.name }}</p>
+      <p>CIF: {{ customerInfo.cif }}</p>
+      <p>Ciudad: {{ customerInfo.city }}</p>
+    </div>
+  </form>
+</div>
+<!-- hay que quitar todo lo que hay en app.component.html -->
