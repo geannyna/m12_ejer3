@@ -9,6 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class CreateCustomerComponent implements OnInit{
   customerForm :FormGroup = new FormGroup({});
   customerInfo: any = null;
+  
 
   constructor() {}
 
@@ -22,6 +23,8 @@ export class CreateCustomerComponent implements OnInit{
   showCustomer() {
     console.log(this.customerForm.value);
     this.customerInfo = this.customerForm.value;
+      // Limpia el formulario
+  this.customerForm.reset();
   }
 }
 

@@ -62,7 +62,6 @@ button{
 }
 
 .info{
- 
   box-shadow: -5px 6px 15px #008489 inset;
   margin: 18px;
   padding: 20px;
@@ -71,5 +70,7 @@ button{
   font-weight: bold;
   border-radius: 15px;
 }
-
+p{
+  margin: 5px;
+}
 
